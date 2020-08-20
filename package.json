@@ -1,0 +1,19 @@
+{
+  "name": "tieba-image-save",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "prepend-comment": "cat ./src/meta.js > ./dist/tmp.js && cat ./dist/main.js >> ./dist/tmp.js && mv ./dist/tmp.js ./dist/main.js",
+    "dev": "webpack-cli -d && npm run prepend-comment",
+    "build": "webpack-cli --mode=production && npm run prepend-comment"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.4.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
+  }
+}
