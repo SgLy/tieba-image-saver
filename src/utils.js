@@ -10,7 +10,7 @@ const log = (s) => {
   });
 };
 
-const isDebug = true;
+const isDebug = false;
 if (isDebug) {
   appendLogStep((s) => {
     // eslint-disable-next-line no-console
