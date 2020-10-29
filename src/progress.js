@@ -8,7 +8,7 @@ const $ = (selector, element = document) =>
  * @param {Record<string, string>} style
  */
 const _ = (tag = 'div', id, style = {}, content = '', classList = []) => {
-  classList.push('tieba-image-save');
+  classList.push('tieba-image-saver');
   const el = document.createElement(tag);
   if (id) el.id = idPrefix + id;
   classList.forEach((c) => el.classList.add(c));
@@ -30,7 +30,7 @@ let container = null;
 
 const body = document.getElementsByTagName('body')[0];
 
-const idPrefix = 'tieba-image-save-';
+const idPrefix = 'tieba-image-saver-';
 
 const ALL_STATE = {
   WAITING: 0,
