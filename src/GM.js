@@ -29,7 +29,7 @@ const request = (
         else success(res.response);
       },
       onerror: (res) => {
-        fail(`Request error: ${res}`);
+        fail(`Request error: ${JSON.stringify(res)}`);
       },
       onprogress: onProgress,
     });
@@ -46,7 +46,9 @@ const request = (
           retryCount + 1
         } attempt)`,
       );
-      fire({ success, fail });
+      setTimeout(() => {
+        fire({ success, fail });
+      }, 3000);
     } else {
       log(
         `Request ${target.href} fail, reason: ${reason}, retrying up to 3 times, failing`,
